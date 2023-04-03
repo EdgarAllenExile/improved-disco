@@ -30,3 +30,5 @@ const winChecker = function(){
         console.log("You Win Diagonally!")
     }
 }
+
+//Now we make it do something fun!
