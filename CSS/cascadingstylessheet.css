@@ -68,3 +68,18 @@ header {
 .game-box p {
     line-height: 120px;
 }
+
+.game-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    opacity: .5;
+}
+
+.naught {
+    background-color: brown;
+}
+
+.cross {
+    background-color: blue;
+}
