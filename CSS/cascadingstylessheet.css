@@ -16,11 +16,12 @@ body {
     width: 800px;
 }
 
-header {
+.basic-format-box {
     border-radius: 25px;
     background-color:azure;
     padding: 20px;
     border: 2px solid grey;
+    margin: 10px;
 }
 
 .game-select-button {
@@ -34,6 +35,23 @@ header {
     color: beige;
     font-weight: 700;
     font-size: 30px;
+}
+
+.menu-input {
+    padding: 10px;
+    margin: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 2px solid rgb(49, 49, 49);
+    width: 300px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.menu-input p {
+    font-weight: 700;
+    line-height: 48px;
+    /* text-align: left; */
 }
 
 #return-button {
@@ -60,17 +78,15 @@ header {
 
 #multi-player-button {
     background-color: rgb(67, 67, 255);
-
 }
 
-#score {
+.menu {
     border-radius: 25px;
     background-color:azure;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border: 2px solid grey;
-
 }
 
 #game {
@@ -108,9 +124,6 @@ header {
     height: 150px;
     border-radius: 25px;
     background-color:lightgoldenrodyellow;
-}
-
-.game-box p {
     line-height: 120px;
 }
 
@@ -136,10 +149,14 @@ header {
 
 
 /* <<<<<<<<<<<<<<<<<I think everything below this can be deleted??>>>>>>>>>>>>>>>>>>> */
-.naught {
-    background-color: red;
+/* .naught {
+    background-color: #ff0000;
 }
 
 .cross {
-    background-color: blue;
-}
+    background-color: #0000ff;
+} */
+
+/* .game-box p {
+    line-height: 120px;
+} */
