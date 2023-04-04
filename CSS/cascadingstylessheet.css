@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
 body {
     font-family: 'Cabin', sans-serif;
@@ -74,6 +75,11 @@ header {
     height: 150px;
     border-radius: 25px;
     opacity: .5;
+    font-family: 'Londrina Outline', 'Courier New', Courier, monospace;
+    font-size: 150px;
+    line-height: 50px;
+    color: black;
+    font-weight:900;
 }
 
 .naught {
@@ -84,3 +90,10 @@ header {
     background-color: blue;
 }
 
+.player1 {
+    color: red;
+}
+
+.player2 {
+    color: blue;
+}
