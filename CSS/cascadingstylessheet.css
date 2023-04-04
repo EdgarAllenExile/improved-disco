@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
+* {
+    box-sizing: border-box;
+  }
+
 body {
     font-family: 'Cabin', sans-serif;
     background-color:slategrey;
@@ -10,13 +14,53 @@ body {
     margin: 0 auto;
     text-align: center;
     width: 800px;
-  }
+}
 
 header {
     border-radius: 25px;
     background-color:azure;
     padding: 20px;
     border: 2px solid grey;
+}
+
+.game-select-button {
+    padding: 10px;
+    margin: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 2px solid rgb(49, 49, 49);
+    width: 300px;
+    border-radius: 25px;
+    color: beige;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#return-button {
+    padding: 10px;
+    margin: 25px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 2px solid rgb(102, 102, 102);
+    width: 300px;
+    border-radius: 25px;
+    color: rgb(59, 59, 59);
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgb(175, 200, 224);
+}
+
+.game-select-box {
+    display: inline-block;  
+}
+
+#single-player-button {
+    background-color: rgb(255, 67, 67);  
+}
+
+#multi-player-button {
+    background-color: rgb(67, 67, 255);
+
 }
 
 #score {
@@ -82,18 +126,20 @@ header {
     font-weight:900;
 }
 
-.naught {
-    background-color: brown;
-}
-
-.cross {
-    background-color: blue;
-}
-
 .player1 {
     color: red;
 }
 
 .player2 {
     color: blue;
+}
+
+
+/* <<<<<<<<<<<<<<<<<I think everything below this can be deleted??>>>>>>>>>>>>>>>>>>> */
+.naught {
+    background-color: red;
+}
+
+.cross {
+    background-color: blue;
 }

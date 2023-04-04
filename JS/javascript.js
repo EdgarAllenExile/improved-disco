@@ -1,19 +1,28 @@
 ///////////// I should use comments and nice things here for my own benefit
-///// Global Variables
-$(document).ready(function () {
-///////////////////////////// try making the player thing work with a boolean!!
 
+/// things that can be cleaned up - move error handling to its own function
+
+$(document).ready(function () { //////I am still not quite sure how this works. But wrapping everything in it does work...
+
+///// Global Variables
 let naughtScore = 0;
 let crossScore = 0;
-let currentPlayer = "O";
+let currentPlayer = "O"; //this is currently redundant
 let isPOne = true;
 
+$('#error-message').hide()
 
 /////////////// on click logic for game /////////////////
 
 $('.game-button').on('click', function(){
+$('.game-box').removeClass('animate__animated animate__shakeX');
     if (isPOne === false){
-        alert('this is not your turn')
+        $(this).parent().addClass('animate__animated animate__shakeX');
+        $('#error-message').show()
+        return false
+    }
+    if (($(this).html() === 'X') || ($(this).html() === 'O') ) {
+        $('#error-message').html('This square is unavailable').show()
         return false
     }
     $(this).html("O").addClass('player1');
@@ -21,13 +30,21 @@ $('.game-button').on('click', function(){
     $('#player').addClass('player2') ///// These should really be a seperate function
     $('#player').removeClass('player1')
     $('#player').html("Player 2's")
+    $('#error-message').hide()
+    $(this).parent().removeClass('animate__animated animate__shakeX')
     console.log(isPOne)
     winChecker();
 
 });
 $('.game-button').on('contextmenu', function(){
+    $('game-box').removeClass('animate__animated animate__shakeX');
     if (isPOne === true){
-        alert('this is not your turn')
+        $(this).parent().addClass('animate__animated animate__shakeX')
+        $('#error-message').show()
+        return false
+    }
+    if (($(this).html() === 'X') || ($(this).html() === 'O') ) {
+        $('#error-message').html('This square is unavailable').show()
         return false
     }
     $(this).html('X').addClass('player2')
@@ -35,11 +52,11 @@ $('.game-button').on('contextmenu', function(){
     $('#player').addClass('player1');     ///// These should really be a seperate function
     $('#player').removeClass('player2');
     $('#player').html("Player 1's")
+    $('#error-message').hide()
     console.log(isPOne)
     winChecker();
     return false
 });
-
 
 const winChecker = function(){
     //// Checks Horizontal Wins
@@ -77,5 +94,26 @@ const scoreUpdate = function() {
 //         $('#player').addClass('player2')
 //     }
 // }
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+
+
+
 
 });
