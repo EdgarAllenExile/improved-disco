@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="CSS/cascadingstylessheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="JS/jquery-3.6.4.min.js"></script>
-    <script src="js/javascript-index.js"></script>
-    <script src="JS/javascript.js"></script>
+    <script src="JS/javascript-index.js"></script>
+    <!-- <script src="JS/javascript.js"></script> -->
     <title>Naughts & Crosses</title>
 </head>
 <body>
@@ -33,13 +33,15 @@
                 <h3>Please choose your player symbol</h3>
                 <p>Player 1 <input type="text" id="player1-name" value="O"></p>
                 <p>Player 2 <input type="text" id="player2-name" value="X"></p>
+                <button id="confirm-name">Confirm</button> 
+                <!-- This button is purely decorative to make the boxes line up -->
             </div>
             <div class="menu-input">
-                <h3>Please choose your player color</h3>
+                <h3>Please choose your player colour</h3>
                 <p>Player 1 <input type="color" id="player1-col" value="#ff0000"></p>
-                <p>Player 2 <input type="color" id="player2-col" value="#0000ff"></p>                
+                <p>Player 2 <input type="color" id="player2-col" value="#0000ff"></p>
+                <button id="confirm-color">Confirm</button>         
             </div>
-
         </div>
         <p><br></p>
     </div>
@@ -49,7 +51,6 @@
 <!--<<<<<<<<<<<<<<<<<<<<<< Still to do >>>>>>>>>>>>>>>>>>-->
 <!-- Allow players to customize their tokens (X, O, name, picture, etc) 
 RM Thoughts: Can we make text scale to fit divs??-->
-<!-- Use LocalStorage to persist data locally to allow games to continue after page refresh or loss of internet connectivity
-Support custom board sizes: default is 3x3 but you could allow users to choose a larger board -->
+<!-- Support custom board sizes: default is 3x3 but you could allow users to choose a larger board --> 
 <!-- Support networked multiplayer: https://www.firebase.com/ has a nice quickstart guide -->
 <!-- TRICKIEST: Create an AI opponent: teach Javascript to play an unbeatable game against you -->

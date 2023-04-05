@@ -1,5 +1,8 @@
 ///////////// I should use comments and nice things here for my own benefit
-
+let player1col = sessionStorage.getItem("player1-col");
+let player2col = sessionStorage.getItem("player2-col");
+$('.player2').css("color", player2col)
+$('.player1').css("color", player1col)
 /// things that can be cleaned up - move error handling to its own function
 $(document).ready(function () { //////I am still not quite sure how this works. But wrapping everything in it does work...
 
@@ -12,8 +15,10 @@ let player1name = sessionStorage.getItem("player1-name");
 let player2name = sessionStorage.getItem("player2-name");
 let player1col = sessionStorage.getItem("player1-col");
 let player2col = sessionStorage.getItem("player2-col");
-console.log(player1name)
-console.log(player2name)
+
+
+$('.player2').css("color", player2col)
+$('.player1').css("color", player1col)
 console.log(player1col)
 console.log(player2col)
 
@@ -33,11 +38,9 @@ $('.game-box').removeClass('animate__animated animate__shakeX');
         $('#announcement-message').html('This square is unavailable').show()
         return false
     }
-    $(this).html(player1name).addClass('player1');
+    $(this).html(player1name).css("color", player1col);
     isPOne = false;
-    $('#player').addClass('player2') ///// These should really be a seperate function
-    $('#player').removeClass('player1')
-    $('#player').html("Player 2's")
+    $('#player').html("Player 2's").css("color", player2col)
     $('#announcement-message').hide()
     $(this).parent().removeClass('animate__animated animate__shakeX')
     winChecker();
@@ -55,11 +58,9 @@ $('.game-button').on('contextmenu', function(){
         $('#announcement-message').html('This square is unavailable').show()
         return false
     }
-    $(this).html(player2name).addClass('player2')
+    $(this).html(player2name).css("color", player2col);
     isPOne = true;
-    $('#player').addClass('player1');     ///// These should really be a seperate function
-    $('#player').removeClass('player2');
-    $('#player').html("Player 1's")
+    $('#player').html("Player 1's").css("color", player1col)
     $('#announcement-message').hide()
     winChecker();
     return false
