@@ -21,7 +21,6 @@ $('.player1').css("color", player1col)
 console.log(player1col)
 console.log(player2col)
 
-// let isGameComplete = false;
 $('#announcement-message').hide()
 
 //<<<<<<<<<<<<<<<<<<<< on click log ic for game >>>>>>>>>>>>>>>>>>>>\\
@@ -113,14 +112,5 @@ const resetFunction = function(){
 $('#reset-button').on('click', function(){
     resetFunction();
 });
-
-// <<<<<<<<<<<<<<<<<<<<<<<<<this breaks the boolean for some reason>>>>>>>>>>>>>>>>>>>>>>>>>
-// const playerSwap = function(){
-//     if (isPOne = true){
-//         $('#player').addClass('player1')
-//     } else{
-//         $('#player').addClass('player2')
-//     }
-// }
 
 });
