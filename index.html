@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="main">
-        <header>
+        <header class="basic-format-box">
             <h1>Naughts & Crosses</h1>
         </header>
         <div id="score" class="menu">
@@ -31,8 +31,8 @@
             <h1>Customisation</h1>
             <div class="menu-input">
                 <h3>Please choose your player symbol</h3>
-                <p>Player 1 <input type="text" id="player1-name" value="O"></p>
-                <p>Player 2 <input type="text" id="player2-name" value="X"></p>
+                <p>Player 1 <input type="text" maxlength="2" min="1" id="player1-name" value="O"></p>
+                <p>Player 2 <input type="text" maxlength="2" min="1" id="player2-name" value="X"></p>
                 <button id="confirm-name">Confirm</button> 
                 <!-- This button is purely decorative to make the boxes line up -->
             </div>
@@ -42,15 +42,12 @@
                 <p>Player 2 <input type="color" id="player2-col" value="#0000ff"></p>
                 <button id="confirm-color">Confirm</button>         
             </div>
+            <p><br></p>
         </div>
-        <p><br></p>
     </div>
 </body>
 </html>
 
 <!--<<<<<<<<<<<<<<<<<<<<<< Still to do >>>>>>>>>>>>>>>>>>-->
-<!-- Allow players to customize their tokens (X, O, name, picture, etc) 
-RM Thoughts: Can we make text scale to fit divs??-->
-<!-- Support custom board sizes: default is 3x3 but you could allow users to choose a larger board --> 
 <!-- Support networked multiplayer: https://www.firebase.com/ has a nice quickstart guide -->
 <!-- TRICKIEST: Create an AI opponent: teach Javascript to play an unbeatable game against you -->

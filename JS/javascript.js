@@ -31,7 +31,7 @@ $('.game-button').on('click', function(){
 $('.game-box').removeClass('animate__animated animate__shakeX');
     if (isPOne === false){
         $(this).parent().addClass('animate__animated animate__shakeX');
-        $('#announcement-message').show()
+        $('#announcement-message').html('It is not your go!').show()
         return false
     }
     if (($(this).html() === player1name) || ($(this).html() === player2name) ) {
@@ -51,7 +51,7 @@ $('.game-button').on('contextmenu', function(){
     $('.game-box').removeClass('animate__animated animate__shakeX');
     if (isPOne === true){
         $(this).parent().addClass('animate__animated animate__shakeX')
-        $('#announcement-message').show()
+        $('#announcement-message').html('It is not your go!').show()
         return false
     }
         if (($(this).html() === player1name) || ($(this).html() === player2name) ) {
@@ -98,18 +98,22 @@ const scoreUpdate = function() {
 }
 
 const resetFunction = function(){
-    $('#00').html("00");
-    $('#01').html("01");
-    $('#02').html("02");
-    $('#10').html("10");
-    $('#11').html("11");
-    $('#12').html("12");
-    $('#20').html("20");
-    $('#21').html("21");
-    $('#22').html("22");
+    $('#00').html("00").css("color", "#fafad2");
+    $('#01').html("01").css("color", "#fafad2");
+    $('#02').html("02").css("color", "#fafad2");
+    $('#10').html("10").css("color", "#fafad2");
+    $('#11').html("11").css("color", "#fafad2");
+    $('#12').html("12").css("color", "#fafad2");
+    $('#20').html("20").css("color", "#fafad2");
+    $('#21').html("21").css("color", "#fafad2");
+    $('#22').html("22").css("color", "#fafad2");
     $('.game-button').removeClass('player1');
     $('.game-button').removeClass('player2');
 }
+
+$('#reset-button').on('click', function(){
+    resetFunction();
+});
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<this breaks the boolean for some reason>>>>>>>>>>>>>>>>>>>>>>>>>
 // const playerSwap = function(){
