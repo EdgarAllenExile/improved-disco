@@ -16,7 +16,6 @@ let player2name = sessionStorage.getItem("player2-name");
 let player1col = sessionStorage.getItem("player1-col");
 let player2col = sessionStorage.getItem("player2-col");
 
-
 $('.player2').css("color", player2col)
 $('.player1').css("color", player1col)
 console.log(player1col)
