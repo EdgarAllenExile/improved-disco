@@ -4,61 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/cascadingstylessheet.css">
+    <link rel="stylesheet" href="CSS/single-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="JS/jquery-3.6.4.min.js"></script>
-    <script src="JS/javascript.js"></script>
+ 
     <title>Naughts & Crosses</title>
 </head>
 <body>
     <div id="main">
-        <header>
+        <header class="basic-format-box">
             <h1>Naughts & Crosses</h1>
         </header>
-        <div id="score">
+        <div id="score" class="basic-format-box">
             <h2>Instructions: Left click for Naughts, Right Click for Crosses.</h2>
             <h3>It is currently: <span id="player" class="player1">Player 1's</span> turn.</h3>
             <div id="box-left" class="score-box">
-                <p>Naughts Score: <span id="naughtScore">0</span></p>
+                <p>Player 1 Score: <span id="naughtScore">0</span></p>
             </div>
             <div id="box-right" class="score-box">
-                <p>Crosses Score: <span id="crossScore">0</span></p>
+                <p>Player 2 Score: <span id="crossScore">0</span></p>
             </div>
         </div>
-        <div id="game">
-            <p id="announcement-message">It's not your turn!</p>
-            <div class="game-box">
-                <button id="00" class="game-button">00</button>
-            </div>
-            <div class="game-box">
-                <button id="01" class="game-button">01</button>
-            </div>
-            <div class="game-box">
-                <button id="02" class="game-button">02</button>
-            </div>
-            <div class="game-box">
-                <button id="10" class="game-button">10</button>
-            </div>
-            <div class="game-box">
-                <button id="11" class="game-button">11</button>
-            </div>
-            <div class="game-box">
-                <button id="12" class="game-button">12</button>
-            </div>
-            <div class="game-box">
-                <button id="20" class="game-button">20</button>
-            </div>
-            <div class="game-box">
-                <button id="21" class="game-button">21</button>
-            </div>
-            <div class="game-box">
-                <button id="22" class="game-button">22</button>
-            </div>
-            <div><br></div>
-            <div class="return-box">
-                <button onclick="location.href='index.html';" id="return-button" class="game-select-button">Main Menu</button>
-            </div>
-        </div>
+    <div id="game" class="basic-format-box">
+    <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
         
+    </table>
+    <div class="endgame">
+		<div class="text"></div>
+	</div>
+</div>
+    <div class="game-select-box">
+        <button onclick="location.href='index.html';" id="return-button" class="game-select-button">Main Menu</button>
     </div>
+    <div class="game-select-box">
+        <button id="reset-button" class="game-select-button">Reset</button>
+    </div>
+    </div>
+	<button onClick="startGame()">Replay</button>
+    <script src="JS/jquery-3.6.4.min.js"></script>
+    <script src="JS/single-script.js"></script>   
 </body>
 </html>
