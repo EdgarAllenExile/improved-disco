@@ -1,16 +1,10 @@
 //Full disclosure, the basis of this code comes from: https://www.youtube.com/watch?v=P2TcQ3h0ipQ
 // In my defence, he doesn't use jQuery, and I have tried to as much as I can!
-let player1name = sessionStorage.getItem("player1-name");
-let player2name = sessionStorage.getItem("player2-name");
-let player1col = sessionStorage.getItem("player1-col");
-let player2col = sessionStorage.getItem("player2-col");
 
-$('.player2').css("color", player2col)
-$('.player1').css("color", player1col)
 
 let origBoard;
-let huPlayer = player1name;
-let aiPlayer = player2name;
+let huPlayer = 'O';
+let aiPlayer = 'X';
 const winCombos = [
     [0,1,2],
     [3,4,5],
